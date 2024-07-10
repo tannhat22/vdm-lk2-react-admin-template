@@ -18,9 +18,9 @@ import {
 
 import RosPropsContext from 'context/RosPropsContext';
 import SignalLightsLayout from './SignalLightsLayout';
-import MaterialLightsLayout from './MaterialLightsLayout';
+// import MaterialLightsLayout from './MaterialLightsLayout';
 import ProducePlanLightsLayout from './ProducePlanLightsLayout';
-import OverallInform from './OverallInform';
+// import OverallInform from './OverallInform';
 import SignalLight from 'components/SignalLight';
 import { useLocales } from 'locales';
 
@@ -113,15 +113,15 @@ function LayoutPage() {
           ref={imgRef}
           src={layoutImg}
           alt="So do layout phong linh kien 2"
-          style={{ objectFit: 'contain', width: '72%', height: 'auto' }}
+          style={{ objectFit: 'contain', width: '86%', height: 'auto' }}
         />
         <SignalLightsLayout width={width} height={height} producePlanData={producePlanData} />
-        <MaterialLightsLayout width={width} height={height} />
+        {/* <MaterialLightsLayout width={width} height={height} /> */}
         <ProducePlanLightsLayout width={width} height={height} producePlanData={producePlanData} />
       </div>
-      <div style={{ position: 'absolute', top: '80px', left: '0px' }}>
+      {/* <div style={{ position: 'absolute', top: '80px', left: '0px' }}>
         <OverallInform producePlanData={producePlanData} />
-      </div>
+      </div> */}
       <div style={{ position: 'absolute', top: '80px', right: '100px' }}>
         <TableContainer component={Paper}>
           <Table sx={{ maxWidth: '360px' }} aria-label="simple table">
