@@ -61,10 +61,13 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
         data.state_machines[stt].type,
         data.state_machines[stt].noload,
         data.state_machines[stt].underload,
+        data.state_machines[stt].error,
         data.state_machines[stt].offtime,
         data.state_machines[stt].signal_light === 1
           ? 'green'
           : data.state_machines[stt].signal_light === 2
+          ? 'yellow'
+          : data.state_machines[stt].signal_light === 3
           ? 'red'
           : 'off',
       ];
@@ -78,8 +81,10 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
             data.overral_machines[i].quantity,
             data.overral_machines[i].noload,
             data.overral_machines[i].underload,
+            data.overral_machines[i].error,
             data.overral_machines[i].offtime,
           ];
+          break;
         }
       }
 
@@ -159,13 +164,15 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
               <span style={{ color: '#212121' }}>
                 {machineData[6] === 'green'
                   ? 'Máy đang sản xuất'
+                  : machineData[6] === 'yellow'
+                  ? 'Dừng máy'
                   : machineData[6] === 'red'
-                  ? 'Dừng máy, máy lỗi'
+                  ? 'Máy lỗi'
                   : translate('Turn off machine')}
               </span>
             </Typography>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
-              {'Thời gian dừng máy, máy lỗi'}:{' '}
+              {'Thời gian dừng máy'}:{' '}
               <span style={{ color: '#212121' }}>
                 {machineData[3] || machineData[3] === 0 ? `${machineData[3]} ${translate('min')}` : 'no info'}
               </span>
@@ -177,9 +184,15 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
               </span>
             </Typography>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
-              {translate('Shutdown time')}:{' '}
+              {'Thời gian máy lỗi'}:{' '}
               <span style={{ color: '#212121' }}>
                 {machineData[5] || machineData[5] === 0 ? `${machineData[5]} ${translate('min')}` : 'no info'}
+              </span>
+            </Typography>
+            <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
+              {translate('Shutdown time')}:{' '}
+              <span style={{ color: '#212121' }}>
+                {machineData[6] || machineData[6] === 0 ? `${machineData[6]} ${translate('min')}` : 'no info'}
               </span>
             </Typography>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
@@ -197,7 +210,7 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
               {translate('Number of machines')}: <span style={{ color: '#212121' }}>{typeData[1] || 'no info'}</span>
             </Typography>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
-              {'Tổng thời gian dừng máy, máy lỗi'}:{' '}
+              {'Tổng thời gian dừng máy'}:{' '}
               <span style={{ color: '#212121' }}>
                 {typeData[2] || typeData[2] === 0 ? `${typeData[2]} ${translate('min')}` : 'no info'}
               </span>
@@ -208,10 +221,16 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
                 {typeData[3] || typeData[3] === 0 ? `${typeData[3]} ${translate('min')}` : 'no info'}
               </span>
             </Typography>
+            <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
+              {'Tổng thời gian máy lỗi'}:{' '}
+              <span style={{ color: '#212121' }}>
+                {typeData[4] || typeData[4] === 0 ? `${typeData[4]} ${translate('min')}` : 'no info'}
+              </span>
+            </Typography>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '50px' }}>
               {translate('Total shutdown time')}:{' '}
               <span style={{ color: '#212121' }}>
-                {typeData[4] || typeData[4] === 0 ? `${typeData[4]} ${translate('min')}` : 'no info'}
+                {typeData[5] || typeData[5] === 0 ? `${typeData[5]} ${translate('min')}` : 'no info'}
               </span>
             </Typography>
           </CardContent>

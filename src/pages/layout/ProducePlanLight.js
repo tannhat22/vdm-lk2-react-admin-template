@@ -16,7 +16,8 @@ function ProducePlanLight({ plan, spm, runTime, posLeft, posTop, size }) {
     >
       <Chip
         color="success"
-        variant={plan === 0 ? 'outlined' : 'soft'}
+        // variant={plan === 0 ? 'outlined' : 'soft'}
+        variant="soft"
         size="small"
         sx={{
           width: '100%',
@@ -27,7 +28,7 @@ function ProducePlanLight({ plan, spm, runTime, posLeft, posTop, size }) {
           },
         }}
         // label={plan ? `${spm * runTime}/ ${plan}` : 0}
-        label={plan ? `${((100 * (spm * runTime)) / plan).toFixed(1)}%` : 0}
+        label={plan ? `${((100 * (spm * runTime)) / plan).toFixed(1)}%` : '0.0%'}
       />
     </div>
   );

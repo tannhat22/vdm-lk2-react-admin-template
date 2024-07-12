@@ -49,9 +49,10 @@ function MachineDataTable({ id, machineName, machineType, beginDate, endDate }) 
     //   id: 1,
     //   date: '',
     //   shift: 'DAY',
-    //   noLoad: 15,
-    //   underLoad: 15,
-    //   offTime: 15,
+    //   noLoad: 100,
+    //   underLoad: 153,
+    //   error: 90,
+    //   offTime: 300,
     //   action: false,
     // },
   ]);
@@ -83,8 +84,9 @@ function MachineDataTable({ id, machineName, machineType, beginDate, endDate }) 
             'ID',
             `${translate('Dates')}`,
             `${translate('Shifts')}`,
-            `${translate('Thời gian dừng máy, máy lỗi (phút)')}`,
+            `${translate('Thời gian dừng máy (phút)')}`,
             `${translate('Thời gian máy sản xuất (phút)')}`,
+            `${translate('Thời gian máy lỗi (phút)')}`,
             `${translate('Shutdown time (min)')}`,
           ];
 
@@ -99,6 +101,7 @@ function MachineDataTable({ id, machineName, machineType, beginDate, endDate }) 
                 machine.machine_data[i].shift,
                 machine.machine_data[i].noload,
                 machine.machine_data[i].underload,
+                machine.machine_data[i].error,
                 machine.machine_data[i].offtime,
               ]);
             }
@@ -252,6 +255,7 @@ function MachineDataTable({ id, machineName, machineType, beginDate, endDate }) 
               result.machine_data.machine_data[i].shift,
               result.machine_data.machine_data[i].noload,
               result.machine_data.machine_data[i].underload,
+              result.machine_data.machine_data[i].error,
               result.machine_data.machine_data[i].offtime,
             ]);
             k++;
@@ -304,7 +308,7 @@ function MachineDataTable({ id, machineName, machineType, beginDate, endDate }) 
     },
     {
       name: 'noLoad',
-      label: `${translate('Thời gian dừng máy, máy lỗi (phút)')}`,
+      label: `${translate('Thời gian dừng máy (phút)')}`,
       options: {
         filter: false,
         sort: true,
@@ -313,6 +317,14 @@ function MachineDataTable({ id, machineName, machineType, beginDate, endDate }) 
     {
       name: 'underLoad',
       label: `${translate('Thời gian máy sản xuất (phút)')}`,
+      options: {
+        filter: false,
+        sort: true,
+      },
+    },
+    {
+      name: 'error',
+      label: `${translate('Thời gian máy lỗi (phút)')}`,
       options: {
         filter: false,
         sort: true,

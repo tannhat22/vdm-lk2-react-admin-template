@@ -19,9 +19,9 @@ import { useLocales } from 'locales';
 function OverviewTable() {
   const { translate } = useLocales();
   const [data, setData] = React.useState([
-    // [0, 1, 'Machine 1', 239, 239, 1, false],
-    // [1, 2, 'Machine 2', 191, 191, 1, false],
-    // [2, 3, 'Machine 3', 211, 211, 1, false],
+    // [0, 1, 'Machine 1', 239, 239, 123, 121, 1, false],
+    // [1, 2, 'Machine 2', 191, 191, 261, 165, 2, false],
+    // [2, 3, 'Machine 3', 211, 211, 151, 411, 3, false],
   ]);
   const ros = React.useContext(RosPropsContext);
 
@@ -52,6 +52,7 @@ function OverviewTable() {
           data.state_machines[i].name,
           data.state_machines[i].noload,
           data.state_machines[i].underload,
+          data.state_machines[i].error,
           data.state_machines[i].offtime,
           data.state_machines[i].signal_light,
           false,
@@ -117,7 +118,7 @@ function OverviewTable() {
     },
     {
       name: 'noLoad',
-      label: translate('Thời gian dừng máy, máy lỗi'),
+      label: translate('Thời gian dừng máy'),
       options: {
         filter: false,
         sort: true,
@@ -126,7 +127,7 @@ function OverviewTable() {
           let mins = value % 60;
           if (hours < 10) hours = `0${hours}`;
           if (mins < 10) mins = `0${mins}`;
-          return `${hours} h : ${mins} m  `;
+          return `${hours} h : ${mins} m`;
         },
       },
     },
@@ -141,7 +142,7 @@ function OverviewTable() {
           let mins = value % 60;
           if (hours < 10) hours = `0${hours}`;
           if (mins < 10) mins = `0${mins}`;
-          return `${hours} h : ${mins} m  `;
+          return `${hours} h : ${mins} m`;
         },
       },
     },
@@ -161,6 +162,21 @@ function OverviewTable() {
     //   },
     // },
     {
+      name: 'errorTime',
+      label: translate('Thời gian máy lỗi'),
+      options: {
+        filter: false,
+        sort: true,
+        customBodyRender: (value) => {
+          let hours = Math.floor(value / 60);
+          let mins = value % 60;
+          if (hours < 10) hours = `0${hours}`;
+          if (mins < 10) mins = `0${mins}`;
+          return `${hours} h : ${mins} m`;
+        },
+      },
+    },
+    {
       name: 'offTime',
       label: translate('Shutdown time'),
       options: {
@@ -171,7 +187,7 @@ function OverviewTable() {
           let mins = value % 60;
           if (hours < 10) hours = `0${hours}`;
           if (mins < 10) mins = `0${mins}`;
-          return `${hours} h : ${mins} m  `;
+          return `${hours} h : ${mins} m`;
         },
       },
     },
@@ -186,7 +202,15 @@ function OverviewTable() {
           style: { textAlign: 'center', justifyContent: 'center' },
         }),
         customBodyRender: (value) =>
-          value === 1 ? <SignalLight color="green" /> : value === 2 ? <SignalLight color="red" /> : <p>No operation</p>,
+          value === 1 ? (
+            <SignalLight color="green" />
+          ) : value === 2 ? (
+            <SignalLight color="yellow" />
+          ) : value === 3 ? (
+            <SignalLight color="red" />
+          ) : (
+            <SignalLight color="off" />
+          ),
       },
     },
     {

@@ -45,11 +45,11 @@ const SignalLightArea = ({ id }) => {
           setColor('green');
           break;
         case 2:
+          setColor('yellow');
+          break;
+        case 3:
           setColor('red');
           break;
-        // case 3:
-        //   setColor('red');
-        //   break;
         default:
           setColor('off');
       }

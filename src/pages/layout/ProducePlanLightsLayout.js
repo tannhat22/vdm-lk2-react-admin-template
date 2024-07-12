@@ -285,7 +285,7 @@ function ProducePlanLightsLayout({ width, height, producePlanData }) {
         plan={producePlanData?.J22?.plan ? producePlanData.J22.plan : 0}
         spm={producePlanData?.J22?.spm ? producePlanData.J22.spm : 0}
         runTime={machinesRun?.J22 ? machinesRun.J22 : 0}
-        posLeft={width * 66.7}
+        posLeft={width * 66.4}
         posTop={height * 14.5}
         size={width * 3.8}
       />
@@ -295,7 +295,7 @@ function ProducePlanLightsLayout({ width, height, producePlanData }) {
         plan={producePlanData?.J23?.plan ? producePlanData.J23.plan : 0}
         spm={producePlanData?.J23?.spm ? producePlanData.J23.spm : 0}
         runTime={machinesRun?.J23 ? machinesRun.J23 : 0}
-        posLeft={width * 66.7}
+        posLeft={width * 66.4}
         posTop={height * 43.55}
         size={width * 3.8}
       />
@@ -305,7 +305,7 @@ function ProducePlanLightsLayout({ width, height, producePlanData }) {
         plan={producePlanData?.J24?.plan ? producePlanData.J24.plan : 0}
         spm={producePlanData?.J24?.spm ? producePlanData.J24.spm : 0}
         runTime={machinesRun?.J24 ? machinesRun.J24 : 0}
-        posLeft={width * 66.7}
+        posLeft={width * 66.4}
         posTop={height * 51.5}
         size={width * 3.8}
       />

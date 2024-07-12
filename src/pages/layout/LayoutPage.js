@@ -20,7 +20,7 @@ import RosPropsContext from 'context/RosPropsContext';
 import SignalLightsLayout from './SignalLightsLayout';
 // import MaterialLightsLayout from './MaterialLightsLayout';
 import ProducePlanLightsLayout from './ProducePlanLightsLayout';
-// import OverallInform from './OverallInform';
+import OverallInform from './OverallInform';
 import SignalLight from 'components/SignalLight';
 import { useLocales } from 'locales';
 
@@ -119,16 +119,18 @@ function LayoutPage() {
         {/* <MaterialLightsLayout width={width} height={height} /> */}
         <ProducePlanLightsLayout width={width} height={height} producePlanData={producePlanData} />
       </div>
-      {/* <div style={{ position: 'absolute', top: '80px', left: '0px' }}>
+      <div style={{ position: 'absolute', top: '60px', right: '100px' }}>
         <OverallInform producePlanData={producePlanData} />
-      </div> */}
-      <div style={{ position: 'absolute', top: '80px', right: '100px' }}>
+      </div>
+      <div style={{ position: 'absolute', top: '478px', right: '100px' }}>
         <TableContainer component={Paper}>
           <Table sx={{ maxWidth: '360px' }} aria-label="simple table">
             <TableHead>
-              <TableRow>
-                <TableCell align="center">Đèn</TableCell>
-                <TableCell>Nội dung hiển thị</TableCell>
+              <TableRow sx={{ backgroundColor: '#1890ff' }}>
+                <TableCell align="center" sx={{ color: '#fff' }}>
+                  Đèn
+                </TableCell>
+                <TableCell sx={{ color: '#fff' }}>Nội dung hiển thị</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -146,11 +148,17 @@ function LayoutPage() {
               </TableRow>
               <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                 <TableCell align="center" component="th" scope="row">
-                  <SignalLight color="red" />
+                  <SignalLight color="yellow" />
                 </TableCell>
-                <TableCell align="left">Dừng máy, máy lỗi</TableCell>
+                <TableCell align="left">Máy đang dừng</TableCell>
               </TableRow>
               <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                <TableCell align="center" component="th" scope="row">
+                  <SignalLight color="red" />
+                </TableCell>
+                <TableCell align="left">Máy lỗi</TableCell>
+              </TableRow>
+              {/* <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                 <TableCell align="center" component="th" scope="row">
                   <SignalLight color="yellow" />
                 </TableCell>
@@ -161,20 +169,19 @@ function LayoutPage() {
                   <SignalLight color="blue" />
                 </TableCell>
                 <TableCell align="left">Đủ nguyên liệu</TableCell>
-              </TableRow>
-              <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+              </TableRow> */}
+              {/* <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                 <TableCell align="center" component="th" scope="row">
                   <Chip label="0" color="success" variant="outlined" size="small" />
                 </TableCell>
                 <TableCell align="left">Không có kế hoạch sản xuất</TableCell>
-              </TableRow>
+              </TableRow> */}
               <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                 <TableCell align="center" component="th" scope="row">
-                  <Chip label="56.5 %" color="success" size="small" />
+                  <Chip label="16.3%" color="success" size="small" />
                 </TableCell>
                 <TableCell align="left">
-                  <Typography>Có kế hoạch sản xuất:</Typography>
-                  <Typography>Tỉ lệ sản xuất thực tích so với kế hoạch WO (%)</Typography>
+                  <Typography>Tỉ lệ thời gian máy sản xuất thực tích so với tổng tời gian bật máy (%)</Typography>
                 </TableCell>
               </TableRow>
               <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
