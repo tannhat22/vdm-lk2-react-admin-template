@@ -50,8 +50,8 @@ function OverviewTable() {
           i,
           data.id_machines[i],
           data.state_machines[i].name,
-          data.state_machines[i].noload,
           data.state_machines[i].underload,
+          data.state_machines[i].noload,
           data.state_machines[i].error,
           data.state_machines[i].offtime,
           data.state_machines[i].signal_light,
@@ -117,21 +117,6 @@ function OverviewTable() {
       },
     },
     {
-      name: 'noLoad',
-      label: translate('Thời gian dừng máy'),
-      options: {
-        filter: false,
-        sort: true,
-        customBodyRender: (value) => {
-          let hours = Math.floor(value / 60);
-          let mins = value % 60;
-          if (hours < 10) hours = `0${hours}`;
-          if (mins < 10) mins = `0${mins}`;
-          return `${hours} h : ${mins} m`;
-        },
-      },
-    },
-    {
       name: 'underLoad',
       label: translate('Thời gian máy sản xuất'),
       options: {
@@ -146,21 +131,21 @@ function OverviewTable() {
         },
       },
     },
-    // {
-    //   name: 'outOfIngredients',
-    //   label: translate('Out of ingredients'),
-    //   options: {
-    //     filter: false,
-    //     sort: true,
-    //     customBodyRender: (value) => {
-    //       let hours = Math.floor(value / 60);
-    //       let mins = value % 60;
-    //       if (hours < 10) hours = `0${hours}`;
-    //       if (mins < 10) mins = `0${mins}`;
-    //       return `${hours} h : ${mins} m  `;
-    //     },
-    //   },
-    // },
+    {
+      name: 'noLoad',
+      label: translate('Thời gian dừng máy'),
+      options: {
+        filter: false,
+        sort: true,
+        customBodyRender: (value) => {
+          let hours = Math.floor(value / 60);
+          let mins = value % 60;
+          if (hours < 10) hours = `0${hours}`;
+          if (mins < 10) mins = `0${mins}`;
+          return `${hours} h : ${mins} m`;
+        },
+      },
+    },
     {
       name: 'errorTime',
       label: translate('Thời gian máy lỗi'),

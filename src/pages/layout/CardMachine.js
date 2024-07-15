@@ -59,8 +59,8 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
         data.id_machines[stt],
         data.state_machines[stt].name,
         data.state_machines[stt].type,
-        data.state_machines[stt].noload,
         data.state_machines[stt].underload,
+        data.state_machines[stt].noload,
         data.state_machines[stt].error,
         data.state_machines[stt].offtime,
         data.state_machines[stt].signal_light === 1
@@ -79,8 +79,8 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
           dataType = [
             data.overral_machines[i].type,
             data.overral_machines[i].quantity,
-            data.overral_machines[i].noload,
             data.overral_machines[i].underload,
+            data.overral_machines[i].noload,
             data.overral_machines[i].error,
             data.overral_machines[i].offtime,
           ];
@@ -171,14 +171,15 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
                   : translate('Turn off machine')}
               </span>
             </Typography>
+
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
-              {'Thời gian dừng máy'}:{' '}
+              {'Thời gian máy sản xuất'}:{' '}
               <span style={{ color: '#212121' }}>
                 {machineData[3] || machineData[3] === 0 ? `${machineData[3]} ${translate('min')}` : 'no info'}
               </span>
             </Typography>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
-              {'Thời gian máy sản xuất'}:{' '}
+              {'Thời gian dừng máy'}:{' '}
               <span style={{ color: '#212121' }}>
                 {machineData[4] || machineData[4] === 0 ? `${machineData[4]} ${translate('min')}` : 'no info'}
               </span>
@@ -210,13 +211,13 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
               {translate('Number of machines')}: <span style={{ color: '#212121' }}>{typeData[1] || 'no info'}</span>
             </Typography>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
-              {'Tổng thời gian dừng máy'}:{' '}
+              {'Tổng thời gian máy sản xuất'}:{' '}
               <span style={{ color: '#212121' }}>
                 {typeData[2] || typeData[2] === 0 ? `${typeData[2]} ${translate('min')}` : 'no info'}
               </span>
             </Typography>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
-              {'Tổng thời gian máy sản xuất'}:{' '}
+              {'Tổng thời gian dừng máy'}:{' '}
               <span style={{ color: '#212121' }}>
                 {typeData[3] || typeData[3] === 0 ? `${typeData[3]} ${translate('min')}` : 'no info'}
               </span>

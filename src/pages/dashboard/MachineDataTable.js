@@ -84,8 +84,8 @@ function MachineDataTable({ id, machineName, machineType, beginDate, endDate }) 
             'ID',
             `${translate('Dates')}`,
             `${translate('Shifts')}`,
-            `${translate('Thời gian dừng máy (phút)')}`,
             `${translate('Thời gian máy sản xuất (phút)')}`,
+            `${translate('Thời gian dừng máy (phút)')}`,
             `${translate('Thời gian máy lỗi (phút)')}`,
             `${translate('Shutdown time (min)')}`,
           ];
@@ -99,8 +99,8 @@ function MachineDataTable({ id, machineName, machineType, beginDate, endDate }) 
                 k,
                 machine.machine_data[i].date,
                 machine.machine_data[i].shift,
-                machine.machine_data[i].noload,
                 machine.machine_data[i].underload,
+                machine.machine_data[i].noload,
                 machine.machine_data[i].error,
                 machine.machine_data[i].offtime,
               ]);
@@ -253,8 +253,8 @@ function MachineDataTable({ id, machineName, machineType, beginDate, endDate }) 
               k,
               result.machine_data.machine_data[i].date,
               result.machine_data.machine_data[i].shift,
-              result.machine_data.machine_data[i].noload,
               result.machine_data.machine_data[i].underload,
+              result.machine_data.machine_data[i].noload,
               result.machine_data.machine_data[i].error,
               result.machine_data.machine_data[i].offtime,
             ]);
@@ -307,16 +307,16 @@ function MachineDataTable({ id, machineName, machineType, beginDate, endDate }) 
       },
     },
     {
-      name: 'noLoad',
-      label: `${translate('Thời gian dừng máy (phút)')}`,
+      name: 'underLoad',
+      label: `${translate('Thời gian máy sản xuất (phút)')}`,
       options: {
         filter: false,
         sort: true,
       },
     },
     {
-      name: 'underLoad',
-      label: `${translate('Thời gian máy sản xuất (phút)')}`,
+      name: 'noLoad',
+      label: `${translate('Thời gian dừng máy (phút)')}`,
       options: {
         filter: false,
         sort: true,

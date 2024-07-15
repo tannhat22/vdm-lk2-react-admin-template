@@ -45,20 +45,20 @@ const OperationTimeChart = ({ id, stage, chartMachine, shift, daysNum, maxDate }
   const [days, setDays] = useState([]); //'10/12','11/12','12/12','13/12','14/12','15/12','16/12','17/12','18/12','19/12','20/12'
   const [series, setSeries] = useState([
     {
-      name: 'Tắt máy',
-      data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100], //10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+      name: 'Máy sản xuất',
+      data: [], //50, 40, 20, 10, 20, 30, 40, 15, 40, 90
     },
     {
       name: 'Dừng máy',
-      data: [50, 40, 20, 10, 20, 30, 40, 15, 40, 90], //50, 40, 20, 10, 20, 30, 40, 15, 40, 90
+      data: [], //50, 40, 20, 10, 20, 30, 40, 15, 40, 90
     },
     {
       name: 'Máy lỗi',
-      data: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100], //10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+      data: [], //10, 20, 30, 40, 50, 60, 70, 80, 90, 100
     },
     {
-      name: 'Máy sản xuất',
-      data: [50, 40, 20, 10, 20, 30, 40, 15, 40, 90], //50, 40, 20, 10, 20, 30, 40, 15, 40, 90
+      name: 'Tắt máy',
+      data: [], //10, 20, 30, 40, 50, 60, 70, 80, 90, 100
     },
   ]);
 
@@ -97,25 +97,25 @@ const OperationTimeChart = ({ id, stage, chartMachine, shift, daysNum, maxDate }
             // let dates = [];
             let dataShow = {
               dates: [],
-              offtimes: [],
-              noloads: [],
               underloads: [],
+              noloads: [],
               errors: [],
+              offtimes: [],
             };
             result.machine_data.machine_data.forEach((mcData) => {
               dataShow.dates.push(mcData.date.slice(0, 5));
-              dataShow.offtimes.push(mcData.offtime);
-              dataShow.noloads.push(mcData.noload);
               dataShow.underloads.push(mcData.underload);
+              dataShow.noloads.push(mcData.noload);
               dataShow.errors.push(mcData.error);
+              dataShow.offtimes.push(mcData.offtime);
             });
 
             setDays(dataShow.dates);
             setSeries([
               {
-                name: 'Tắt máy',
-                // data: result.machine_data.offtime,
-                data: dataShow.offtimes,
+                name: 'Máy sản xuất',
+                // data: result.machine_data.underload,
+                data: dataShow.underloads,
               },
               {
                 name: 'Dừng máy',
@@ -128,9 +128,9 @@ const OperationTimeChart = ({ id, stage, chartMachine, shift, daysNum, maxDate }
                 data: dataShow.errors,
               },
               {
-                name: 'Máy sản xuất',
-                // data: result.machine_data.underload,
-                data: dataShow.underloads,
+                name: 'Tắt máy',
+                // data: result.machine_data.offtime,
+                data: dataShow.offtimes,
               },
             ]);
           }
@@ -156,25 +156,25 @@ const OperationTimeChart = ({ id, stage, chartMachine, shift, daysNum, maxDate }
             // let dates = [];
             let dataShow = {
               dates: [],
-              offtimes: [],
-              noloads: [],
               underloads: [],
+              noloads: [],
               errors: [],
+              offtimes: [],
             };
             result.stage_data[result.stage_data.length - 1].machine_data.forEach((mcData) => {
               dataShow.dates.push(mcData.date.slice(0, 5));
-              dataShow.offtimes.push(mcData.offtime);
-              dataShow.noloads.push(mcData.noload);
               dataShow.underloads.push(mcData.underload);
+              dataShow.noloads.push(mcData.noload);
               dataShow.errors.push(mcData.error);
+              dataShow.offtimes.push(mcData.offtime);
             });
 
             setDays(dataShow.dates);
             setSeries([
               {
-                name: 'Tắt máy',
-                // data: result.machine_data.offtime,
-                data: dataShow.offtimes,
+                name: 'Máy sản xuất',
+                // data: result.machine_data.underload,
+                data: dataShow.underloads,
               },
               {
                 name: 'Dừng máy',
@@ -187,9 +187,9 @@ const OperationTimeChart = ({ id, stage, chartMachine, shift, daysNum, maxDate }
                 data: dataShow.errors,
               },
               {
-                name: 'Máy sản xuất',
-                // data: result.machine_data.underload,
-                data: dataShow.underloads,
+                name: 'Tắt máy',
+                // data: result.machine_data.offtime,
+                data: dataShow.offtimes,
               },
             ]);
           }
@@ -202,7 +202,7 @@ const OperationTimeChart = ({ id, stage, chartMachine, shift, daysNum, maxDate }
     setOptions((prevState) => ({
       ...prevState,
       // colors: [theme.palette.primary.main, 'rgb(0, 227, 150)', 'rgba(252,185,0,1)'],
-      colors: ['rgb(199, 199, 200)', 'rgba(252,185,0,1)', 'rgba(255,77,79,1)', 'rgb(0, 227, 150)'],
+      colors: ['rgb(0, 227, 150)', 'rgba(252,185,0,1)', 'rgba(255,77,79,1)', 'rgb(199, 199, 200)'],
       xaxis: {
         categories: days,
         labels: {

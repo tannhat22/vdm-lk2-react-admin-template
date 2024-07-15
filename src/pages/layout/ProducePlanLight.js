@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import SignalLight from 'components/SignalLight';
 import Chip from '@mui/material/Chip';
 
-function ProducePlanLight({ plan, spm, runTime, posLeft, posTop, size }) {
+function ProducePlanLight({ runTime, posLeft, posTop, size }) {
   return (
     <div
       style={{
@@ -27,16 +26,13 @@ function ProducePlanLight({ plan, spm, runTime, posLeft, posTop, size }) {
             whiteSpace: 'normal',
           },
         }}
-        // label={plan ? `${spm * runTime}/ ${plan}` : 0}
-        label={plan ? `${((100 * (spm * runTime)) / plan).toFixed(1)}%` : '0.0%'}
+        label={runTime ? `${runTime.toFixed(1)}%` : '0.0%'}
       />
     </div>
   );
 }
 
 ProducePlanLight.propTypes = {
-  plan: PropTypes.number,
-  spm: PropTypes.number,
   runTime: PropTypes.number,
   posLeft: PropTypes.number,
   posTop: PropTypes.number,
