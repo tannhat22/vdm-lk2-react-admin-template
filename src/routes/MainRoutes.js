@@ -13,6 +13,9 @@ const Dashboard = Loadable(lazy(() => import('pages/dashboard')));
 // render - layout
 const Layout = Loadable(lazy(() => import('pages/layout')));
 
+// render - dashboard
+const ProducePlan = Loadable(lazy(() => import('pages/produce')));
+
 // render - setting
 const Setting = Loadable(lazy(() => import('pages/setting')));
 
@@ -43,6 +46,10 @@ const MainRoutes = {
     {
       path: 'dashboard',
       element: <Dashboard />,
+    },
+    {
+      path: 'producePlan',
+      element: <ProducePlan />,
     },
     {
       path: 'setting',

@@ -62,6 +62,8 @@ const vn = {
   'View logs': 'Xem nhật ký',
   'Choose days': 'Chọn số ngày',
   'VDM Machining Tools Manufacturing Section': 'Phòng Cơ Khí Chế Tạo VDM',
+
+  'Produce plan': 'Kế hoạch sản xuất',
 };
 
 export default vn;
