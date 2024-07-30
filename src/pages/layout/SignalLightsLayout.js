@@ -67,6 +67,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j01Img}
         plan={producePlanData?.J01?.plan ? producePlanData.J01.plan : 0}
         spm={producePlanData?.J01?.spm ? producePlanData.J01.spm : 0}
+        code={producePlanData?.J01?.code ? producePlanData.J01.code : ''}
       />
 
       {/* J02 */}
@@ -79,6 +80,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j02Img}
         plan={producePlanData?.J02?.plan ? producePlanData.J02.plan : 0}
         spm={producePlanData?.J02?.spm ? producePlanData.J02.spm : 0}
+        code={producePlanData?.J02?.code ? producePlanData.J02.code : ''}
       />
 
       {/* J03 */}
@@ -91,6 +93,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j03Img}
         plan={producePlanData?.J03?.plan ? producePlanData.J03.plan : 0}
         spm={producePlanData?.J03?.spm ? producePlanData.J03.spm : 0}
+        code={producePlanData?.J03?.code ? producePlanData.J03.code : ''}
       />
 
       {/* J04 */}
@@ -103,6 +106,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j04Img}
         plan={producePlanData?.J04?.plan ? producePlanData.J04.plan : 0}
         spm={producePlanData?.J04?.spm ? producePlanData.J04.spm : 0}
+        code={producePlanData?.J04?.code ? producePlanData.J04.code : ''}
       />
 
       {/* J05 */}
@@ -115,6 +119,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j05Img}
         plan={producePlanData?.J05?.plan ? producePlanData.J05.plan : 0}
         spm={producePlanData?.J05?.spm ? producePlanData.J05.spm : 0}
+        code={producePlanData?.J05?.code ? producePlanData.J05.code : ''}
       />
 
       {/* J06 */}
@@ -127,6 +132,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j06Img}
         plan={producePlanData?.J06?.plan ? producePlanData.J06.plan : 0}
         spm={producePlanData?.J06?.spm ? producePlanData.J06.spm : 0}
+        code={producePlanData?.J06?.code ? producePlanData.J06.code : ''}
       />
 
       {/* J07 */}
@@ -139,6 +145,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j07Img}
         plan={producePlanData?.J07?.plan ? producePlanData.J07.plan : 0}
         spm={producePlanData?.J07?.spm ? producePlanData.J07.spm : 0}
+        code={producePlanData?.J07?.code ? producePlanData.J07.code : ''}
       />
 
       {/* J08 */}
@@ -151,6 +158,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j08Img}
         plan={producePlanData?.J08?.plan ? producePlanData.J08.plan : 0}
         spm={producePlanData?.J08?.spm ? producePlanData.J08.spm : 0}
+        code={producePlanData?.J08?.code ? producePlanData.J08.code : ''}
       />
 
       {/* J09 */}
@@ -163,6 +171,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j09Img}
         plan={producePlanData?.J09?.plan ? producePlanData.J09.plan : 0}
         spm={producePlanData?.J09?.spm ? producePlanData.J09.spm : 0}
+        code={producePlanData?.J09?.code ? producePlanData.J09.code : ''}
       />
 
       {/* J10 */}
@@ -175,6 +184,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j10Img}
         plan={producePlanData?.J10?.plan ? producePlanData.J10.plan : 0}
         spm={producePlanData?.J10?.spm ? producePlanData.J10.spm : 0}
+        code={producePlanData?.J10?.code ? producePlanData.J10.code : ''}
       />
 
       {/* J11 */}
@@ -187,6 +197,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j11Img}
         plan={producePlanData?.J11?.plan ? producePlanData.J11.plan : 0}
         spm={producePlanData?.J11?.spm ? producePlanData.J11.spm : 0}
+        code={producePlanData?.J11?.code ? producePlanData.J11.code : ''}
       />
 
       {/* J12 */}
@@ -199,6 +210,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j12Img}
         plan={producePlanData?.J12?.plan ? producePlanData.J12.plan : 0}
         spm={producePlanData?.J12?.spm ? producePlanData.J12.spm : 0}
+        code={producePlanData?.J12?.code ? producePlanData.J12.code : ''}
       />
 
       {/* J13 */}
@@ -211,6 +223,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j13Img}
         plan={producePlanData?.J13?.plan ? producePlanData.J13.plan : 0}
         spm={producePlanData?.J13?.spm ? producePlanData.J13.spm : 0}
+        code={producePlanData?.J13?.code ? producePlanData.J13.code : ''}
       />
 
       {/* J14 */}
@@ -223,6 +236,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j14Img}
         plan={producePlanData?.J14?.plan ? producePlanData.J14.plan : 0}
         spm={producePlanData?.J14?.spm ? producePlanData.J14.spm : 0}
+        code={producePlanData?.J14?.code ? producePlanData.J14.code : ''}
       />
 
       {/* J15 */}
@@ -235,6 +249,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j15Img}
         plan={producePlanData?.J15?.plan ? producePlanData.J15.plan : 0}
         spm={producePlanData?.J15?.spm ? producePlanData.J15.spm : 0}
+        code={producePlanData?.J15?.code ? producePlanData.J15.code : ''}
       />
 
       {/* J16 */}
@@ -247,6 +262,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j16Img}
         plan={producePlanData?.J16?.plan ? producePlanData.J16.plan : 0}
         spm={producePlanData?.J16?.spm ? producePlanData.J16.spm : 0}
+        code={producePlanData?.J16?.code ? producePlanData.J16.code : ''}
       />
 
       {/* J17 */}
@@ -259,6 +275,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j17Img}
         plan={producePlanData?.J17?.plan ? producePlanData.J17.plan : 0}
         spm={producePlanData?.J17?.spm ? producePlanData.J17.spm : 0}
+        code={producePlanData?.J17?.code ? producePlanData.J17.code : ''}
       />
 
       {/* J18 */}
@@ -271,6 +288,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j18Img}
         plan={producePlanData?.J18?.plan ? producePlanData.J18.plan : 0}
         spm={producePlanData?.J18?.spm ? producePlanData.J18.spm : 0}
+        code={producePlanData?.J18?.code ? producePlanData.J18.code : ''}
       />
 
       {/* J19 */}
@@ -283,6 +301,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j19Img}
         plan={producePlanData?.J19?.plan ? producePlanData.J19.plan : 0}
         spm={producePlanData?.J19?.spm ? producePlanData.J19.spm : 0}
+        code={producePlanData?.J19?.code ? producePlanData.J19.code : ''}
       />
 
       {/* J20 */}
@@ -295,6 +314,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j20Img}
         plan={producePlanData?.J20?.plan ? producePlanData.J20.plan : 0}
         spm={producePlanData?.J20?.spm ? producePlanData.J20.spm : 0}
+        code={producePlanData?.J20?.code ? producePlanData.J20.code : ''}
       />
 
       {/* J21 */}
@@ -307,6 +327,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j21Img}
         plan={producePlanData?.J21?.plan ? producePlanData.J21.plan : 0}
         spm={producePlanData?.J21?.spm ? producePlanData.J21.spm : 0}
+        code={producePlanData?.J21?.code ? producePlanData.J21.code : ''}
       />
 
       {/* J22 */}
@@ -319,6 +340,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j22Img}
         plan={producePlanData?.J22?.plan ? producePlanData.J22.plan : 0}
         spm={producePlanData?.J22?.spm ? producePlanData.J22.spm : 0}
+        code={producePlanData?.J22?.code ? producePlanData.J22.code : ''}
       />
 
       {/* J23 */}
@@ -331,6 +353,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j23Img}
         plan={producePlanData?.J23?.plan ? producePlanData.J23.plan : 0}
         spm={producePlanData?.J23?.spm ? producePlanData.J23.spm : 0}
+        code={producePlanData?.J23?.code ? producePlanData.J23.code : ''}
       />
 
       {/* J24 */}
@@ -343,6 +366,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         img={j24Img}
         plan={producePlanData?.J24?.plan ? producePlanData.J24.plan : 0}
         spm={producePlanData?.J24?.spm ? producePlanData.J24.spm : 0}
+        code={producePlanData?.J24?.code ? producePlanData.J24.code : ''}
       />
     </div>
   );

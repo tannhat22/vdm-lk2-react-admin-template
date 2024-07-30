@@ -31,7 +31,7 @@ function ProducePlanLightsLayout({ width, height }) {
         const totalTime = state.noload + state.underload + state.error;
         machinesRunData = {
           ...machinesRunData,
-          [state.name]: state.underload / totalTime,
+          [state.name]: (state.underload * 100) / totalTime,
         };
       });
       setMachinesRun({

@@ -73,7 +73,7 @@ function LayoutPage() {
         result.produce_plane_data.forEach((element) => {
           producePlans = {
             ...producePlans,
-            [element.machine_name]: { plan: element.produce_plan, spm: element.spm },
+            [element.machine_name]: { plan: element.produce_plan, spm: element.spm, code: element.produce_code },
           };
         });
 
@@ -124,7 +124,7 @@ function LayoutPage() {
       </div>
       <div style={{ position: 'absolute', top: '478px', right: '100px' }}>
         <TableContainer component={Paper}>
-          <Table sx={{ maxWidth: '360px' }} aria-label="simple table">
+          <Table sx={{ minWidth: '360px' }} aria-label="simple table">
             <TableHead>
               <TableRow sx={{ backgroundColor: '#1890ff' }}>
                 <TableCell align="center" sx={{ color: '#fff' }}>
@@ -181,7 +181,7 @@ function LayoutPage() {
                   <Chip label="16.3%" color="success" size="small" />
                 </TableCell>
                 <TableCell align="left">
-                  <Typography>Tỉ lệ thời gian máy sản xuất thực tích so với tổng tời gian bật máy (%)</Typography>
+                  <Typography>Tỉ lệ hoạt động (%)</Typography>
                 </TableCell>
               </TableRow>
               <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>

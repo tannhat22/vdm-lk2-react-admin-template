@@ -52,6 +52,7 @@ const ProducePlan = () => {
   const [openLogin, setOpenLogin] = useState(false);
   const [status, setStatus] = useState('');
   const [successServ, setSuccessServ] = useState(true);
+  const [openSuccess, setOpenSuccess] = useState(false);
   const [values, setValues] = useState({
     pass: '',
     showPass: false,
@@ -77,10 +78,11 @@ const ProducePlan = () => {
       setIsLoad(false);
 
       if (result.success) {
-        setOpenAdd(false);
-        update();
+        setOpenLogin(false);
+        setOpenSuccess(true);
       } else {
         setStatus(result.status);
+        setSuccessServ(false);
       }
     });
   }
@@ -92,6 +94,7 @@ const ProducePlan = () => {
   const handleClose = () => {
     if (isLoad) return;
     setOpenLogin(false);
+    setOpenSuccess(false);
   };
 
   const handleSubmit = (e) => {
@@ -141,7 +144,7 @@ const ProducePlan = () => {
     // console.log(e.dataTransfer.files);
     if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
       handleFiles(e.dataTransfer.files);
-      e.dataTransfer.clearData();
+      // e.dataTransfer.clearData();
     }
   };
 
@@ -248,64 +251,87 @@ const ProducePlan = () => {
         </div>
       </Box>
       <Modal
-        open={openLogin}
+        open={openLogin || openSuccess}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          <Paper elelvation={2} sx={{ padding: 4 }}>
-            <form onSubmit={handleSubmit}>
-              <Grid container direction="column" spacing={2}>
-                <Grid item>
-                  <Typography>
-                    <span style={{ color: 'red' }}>Cập nhật kế hoạch sản xuất:</span>
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <TextField
-                    error={!successServ}
-                    name="pass"
-                    type={values.showPass ? 'text' : 'password'}
-                    fullWidth
-                    label="Password"
-                    placeholder="Password"
-                    variant="outlined"
-                    required
-                    helperText={status}
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position="end">
-                          <IconButton
-                            // onClick={handlePassVisibilty}
-                            aria-label="toggle password"
-                            edge="end"
-                            onClick={togglePasswordHide}
-                          >
-                            {values.showPass ? <VisibilityIcon /> : <VisibilityOffIcon />}
-                          </IconButton>
-                        </InputAdornment>
-                      ),
-                    }}
-                    onChange={handleChange}
-                  />
-                </Grid>
-
-                <Grid item>
-                  <Button disabled={isLoad} type="submit" fullWidth variant="contained">
-                    Cập nhật
-                  </Button>
-                </Grid>
-
-                {isLoad ? (
+        {openSuccess ? (
+          <Box
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: '400px',
+              height: '160px',
+              padding: 0,
+            }}
+          >
+            <Paper
+              elelvation={2}
+              sx={{ padding: 4, height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+            >
+              <Typography variant="h5" style={{ color: 'green' }}>
+                Đã cập nhật thành công kế hoạch sản xuất!
+              </Typography>
+            </Paper>
+          </Box>
+        ) : (
+          <Box sx={style}>
+            <Paper elelvation={2} sx={{ padding: 4 }}>
+              <form onSubmit={handleSubmit}>
+                <Grid container direction="column" spacing={2}>
                   <Grid item>
-                    <LinearProgress />
+                    <Typography>
+                      <span style={{ color: 'red' }}>Cập nhật kế hoạch sản xuất:</span>
+                    </Typography>
                   </Grid>
-                ) : null}
-              </Grid>
-            </form>
-          </Paper>
-        </Box>
+                  <Grid item>
+                    <TextField
+                      error={!successServ}
+                      name="pass"
+                      type={values.showPass ? 'text' : 'password'}
+                      fullWidth
+                      label="Password"
+                      placeholder="Password"
+                      variant="outlined"
+                      required
+                      helperText={status}
+                      InputProps={{
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <IconButton
+                              // onClick={handlePassVisibilty}
+                              aria-label="toggle password"
+                              edge="end"
+                              onClick={togglePasswordHide}
+                            >
+                              {values.showPass ? <VisibilityIcon /> : <VisibilityOffIcon />}
+                            </IconButton>
+                          </InputAdornment>
+                        ),
+                      }}
+                      onChange={handleChange}
+                    />
+                  </Grid>
+
+                  <Grid item>
+                    <Button disabled={isLoad} type="submit" fullWidth variant="contained">
+                      Cập nhật
+                    </Button>
+                  </Grid>
+
+                  {isLoad ? (
+                    <Grid item>
+                      <LinearProgress />
+                    </Grid>
+                  ) : null}
+                </Grid>
+              </form>
+            </Paper>
+          </Box>
+        )}
       </Modal>
       {/* <div>
         {data.length > 0 && (

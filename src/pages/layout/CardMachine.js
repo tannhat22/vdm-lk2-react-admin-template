@@ -13,7 +13,7 @@ import { activeItem } from 'store/reducers/menu';
 import menuItems from 'menu-items';
 import { useLocales } from 'locales';
 
-function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) {
+function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm, code }) {
   const { translate } = useLocales();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -71,7 +71,6 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
           ? 'red'
           : 'off',
       ];
-
       // Lấy dữ liệu theo loại máy
       let dataType;
       for (let i = 0; i < data.types_quantity; i++) {
@@ -125,7 +124,7 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
         onMouseEnter={handlePopoverOpen}
         onMouseLeave={handlePopoverClose}
       >
-        <SignalLight color={machineData[6] || 'off'} size={`${size / 100}`} custom="layout" />
+        <SignalLight color={machineData[7] || 'off'} size={`${size / 100}`} custom="layout" />
       </ButtonBase>
       <Popover
         id={`mouse-over-popover-${machineId}`}
@@ -157,16 +156,16 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
               {translate('Machine name')}: <span style={{ color: '#1C2025' }}>{machineData[1] || 'no info'}</span>
             </Typography>
             <div style={{ position: 'absolute', top: '6px', right: '18px' }}>
-              <SignalLight color={machineData[6] || 'off'} />
+              <SignalLight color={machineData[7] || 'off'} />
             </div>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
               {translate('Operating status')}:{' '}
               <span style={{ color: '#212121' }}>
-                {machineData[6] === 'green'
+                {machineData[7] === 'green'
                   ? 'Máy đang sản xuất'
-                  : machineData[6] === 'yellow'
+                  : machineData[7] === 'yellow'
                   ? 'Dừng máy'
-                  : machineData[6] === 'red'
+                  : machineData[7] === 'red'
                   ? 'Máy lỗi'
                   : translate('Turn off machine')}
               </span>
@@ -198,6 +197,9 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm }) 
             </Typography>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
               {'Kế hoạch sản xuất theo WO'}: <span style={{ color: '#212121' }}>{plan ? `${plan} pcs` : 0}</span>
+            </Typography>
+            <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '10px' }}>
+              {'Mã hàng sản xuất'}: <span style={{ color: '#212121' }}>{code ? `${code}` : 'no info'}</span>
             </Typography>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '50px' }}>
               {'Thực tích sản xuất'}:{' '}
@@ -250,6 +252,7 @@ CardMachine.propTypes = {
   img: PropTypes.node,
   plan: PropTypes.number,
   spm: PropTypes.number,
+  code: PropTypes.string,
 };
 
 export default CardMachine;
