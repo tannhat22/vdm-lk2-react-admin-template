@@ -14,9 +14,9 @@ function ProducePlanLight({ runTime, posLeft, posTop, size }) {
       }}
     >
       <Chip
-        color="success"
-        // variant={plan === 0 ? 'outlined' : 'soft'}
-        variant="soft"
+        color={runTime >= 80 ? 'primary' : 'error'}
+        // variant={runTime >== 0 ? 'outlined' : 'soft'}
+        variant="outlined"
         size="small"
         sx={{
           width: '100%',
@@ -25,6 +25,9 @@ function ProducePlanLight({ runTime, posLeft, posTop, size }) {
             display: 'block',
             whiteSpace: 'normal',
           },
+          // borderColor: 'black',
+          backgroundColor: 'white',
+          // color: `${runTime >= 80 ? 'blue' : 'red'}`,
         }}
         label={runTime ? `${runTime.toFixed(1)}%` : '0.0%'}
       />

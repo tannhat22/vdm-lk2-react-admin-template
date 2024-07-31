@@ -122,7 +122,7 @@ function LayoutPage() {
       <div style={{ position: 'absolute', top: '60px', right: '100px' }}>
         <OverallInform producePlanData={producePlanData} />
       </div>
-      <div style={{ position: 'absolute', top: '478px', right: '100px' }}>
+      <div style={{ position: 'absolute', top: '454px', right: '100px' }}>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: '360px' }} aria-label="simple table">
             <TableHead>
@@ -158,37 +158,27 @@ function LayoutPage() {
                 </TableCell>
                 <TableCell align="left">Máy lỗi</TableCell>
               </TableRow>
-              {/* <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                <TableCell align="center" component="th" scope="row">
-                  <SignalLight color="yellow" />
-                </TableCell>
-                <TableCell align="left">Hết nguyên liệu</TableCell>
-              </TableRow>
-              <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                <TableCell align="center" component="th" scope="row">
-                  <SignalLight color="blue" />
-                </TableCell>
-                <TableCell align="left">Đủ nguyên liệu</TableCell>
-              </TableRow> */}
-              {/* <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                <TableCell align="center" component="th" scope="row">
-                  <Chip label="0" color="success" variant="outlined" size="small" />
-                </TableCell>
-                <TableCell align="left">Không có kế hoạch sản xuất</TableCell>
-              </TableRow> */}
-              <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                <TableCell align="center" component="th" scope="row">
-                  <Chip label="16.3%" color="success" size="small" />
-                </TableCell>
-                <TableCell align="left">
-                  <Typography>Tỉ lệ hoạt động (%)</Typography>
-                </TableCell>
-              </TableRow>
               <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                 <TableCell align="center" component="th" scope="row">
                   <SignalLight custom="standing" color="purple" size="28" />
                 </TableCell>
                 <TableCell align="left">Vị trí đứng</TableCell>
+              </TableRow>
+              <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                <TableCell align="center" component="th" scope="row">
+                  <Chip label="80.0%" color="primary" size="small" variant="outlined" />
+                </TableCell>
+                <TableCell align="left">
+                  <Typography>Tỉ lệ hoạt động trên 80% (%)</Typography>
+                </TableCell>
+              </TableRow>
+              <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                <TableCell align="center" component="th" scope="row">
+                  <Chip label="42.3%" color="error" size="small" variant="outlined" />
+                </TableCell>
+                <TableCell align="left">
+                  <Typography>Tỉ lệ hoạt động dưới 80% (%)</Typography>
+                </TableCell>
               </TableRow>
             </TableBody>
           </Table>

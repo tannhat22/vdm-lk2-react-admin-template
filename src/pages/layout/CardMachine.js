@@ -203,7 +203,7 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm, co
             </Typography>
             <Typography variant="subtitle1" color="#616161" sx={{ marginBottom: '50px' }}>
               {'Thực tích sản xuất'}:{' '}
-              <span style={{ color: '#212121' }}>{spm ? `${spm * machineData[4]} pcs` : 0}</span>
+              <span style={{ color: '#212121' }}>{spm ? `${spm * machineData[3]} pcs` : 0}</span>
             </Typography>
             <Typography gutterBottom variant="h3" component="div" color="primary">
               {translate('Process')}: <span style={{ color: '#1C2025' }}>{typeData[0] || 'no info'}</span>

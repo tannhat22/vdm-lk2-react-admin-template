@@ -11,7 +11,7 @@
   align-items: center;
   height: calc(var(--size-signal-light) + 2px);
   width: 100%;
-  margin: 10px 0;
+  margin: 4px 0;
   float: left;
 }
 
@@ -21,7 +21,7 @@
   align-items: center;
   /* height: 30px; */
   width: 100%;
-  margin: 10px 0;
+  margin: 4px 0;
   float: left;
 }
 

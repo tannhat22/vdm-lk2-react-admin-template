@@ -84,7 +84,7 @@ function OverallInform({ producePlanData }) {
   return (
     <Box>
       <Typography
-        variant="h4"
+        variant="h5"
         color="white"
         align="center"
         sx={{ backgroundColor: '#1890ff', padding: '4px 0', borderRadius: '4px 4px 0 0 ' }}
@@ -95,57 +95,57 @@ function OverallInform({ producePlanData }) {
         <Table sx={{ maxWidth: '360px' }} aria-label="simple table">
           <TableBody>
             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '1.0rem', fontWeight: 'normal' }}>
+              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '0.95rem', fontWeight: 'normal' }}>
                 Tổng số máy đang sản xuất
               </TableCell>
               <TableCell
                 align="left"
-                sx={{ minWidth: '120px', fontSize: '1.1rem', fontWeight: 'bolder', color: 'blue ' }}
+                sx={{ minWidth: '120px', fontSize: '0.95rem', fontWeight: 'bolder', color: 'blue ' }}
               >{`${machineData.machinesRun}/${machineData.machines} máy`}</TableCell>
             </TableRow>
             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '1.0rem', fontWeight: 'normal' }}>
+              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '0.95rem', fontWeight: 'normal' }}>
                 Tổng số máy đang dừng
               </TableCell>
               <TableCell
                 align="left"
-                sx={{ fontSize: '1.1rem', fontWeight: 'bolder', color: 'blue ' }}
+                sx={{ fontSize: '0.95rem', fontWeight: 'bolder', color: 'blue ' }}
               >{`${machineData.machinesStop}/${machineData.machines} máy`}</TableCell>
             </TableRow>
             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '1.0rem', fontWeight: 'normal' }}>
+              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '0.95rem', fontWeight: 'normal' }}>
                 Tổng số máy lỗi
               </TableCell>
               <TableCell
                 align="left"
-                sx={{ fontSize: '1.1rem', fontWeight: 'bolder', color: 'blue ' }}
+                sx={{ fontSize: '0.95rem', fontWeight: 'bolder', color: 'blue ' }}
               >{`${machineData.machinesError}/${machineData.machines} máy`}</TableCell>
             </TableRow>
             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '1.0rem', fontWeight: 'normal' }}>
+              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '0.95rem', fontWeight: 'normal' }}>
                 Tổng số máy đang tắt
               </TableCell>
               <TableCell
                 align="left"
-                sx={{ fontSize: '1.1rem', fontWeight: 'bolder', color: 'blue ' }}
+                sx={{ fontSize: '0.95rem', fontWeight: 'bolder', color: 'blue ' }}
               >{`${machineData.machinesOff}/${machineData.machines} máy`}</TableCell>
             </TableRow>
             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '1.0rem', fontWeight: 'normal' }}>
+              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '0.95rem', fontWeight: 'normal' }}>
                 Tổng số máy có kế hoạch sản xuất
               </TableCell>
               <TableCell
                 align="left"
-                sx={{ fontSize: '1.1rem', fontWeight: 'bolder', color: 'blue ' }}
+                sx={{ fontSize: '0.95rem', fontWeight: 'bolder', color: 'blue ' }}
               >{`${machinesPlan}/${machineData.machines} máy`}</TableCell>
             </TableRow>
             <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '1.0rem', fontWeight: 'normal' }}>
+              <TableCell align="left" component="th" scope="row" sx={{ fontSize: '0.95rem', fontWeight: 'normal' }}>
                 Tổng số máy chạy đúng kế hoạch sản xuất
               </TableCell>
               <TableCell
                 align="left"
-                sx={{ fontSize: '1.1rem', fontWeight: 'bolder', color: 'blue ' }}
+                sx={{ fontSize: '0.95rem', fontWeight: 'bolder', color: 'blue ' }}
               >{`${machineData.machinesPlanCorrect}/${machinesPlan} máy`}</TableCell>
             </TableRow>
           </TableBody>
