@@ -31,6 +31,13 @@ import j21Img from 'assets/images/machines/j21.jpg';
 import j22Img from 'assets/images/machines/j22.jpg';
 import j23Img from 'assets/images/machines/j23.jpg';
 import j24Img from 'assets/images/machines/j24.jpg';
+import Q51Img from 'assets/images/machines/Q51.jpg';
+import Q52Img from 'assets/images/machines/Q52.jpg';
+import Q53Img from 'assets/images/machines/Q53.jpg';
+import Q54Img from 'assets/images/machines/Q54.jpg';
+import Q55Img from 'assets/images/machines/Q55.jpg';
+import Q56Img from 'assets/images/machines/Q56.jpg';
+import Z31Img from 'assets/images/machines/Z31.jpg';
 
 function SignalLightsLayout({ width, height, producePlanData }) {
   const [machinesId, setMachinesId] = useState([]);
@@ -367,6 +374,97 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         plan={producePlanData?.J24?.plan ? producePlanData.J24.plan : 0}
         spm={producePlanData?.J24?.spm ? producePlanData.J24.spm : 0}
         code={producePlanData?.J24?.code ? producePlanData.J24.code : ''}
+      />
+
+      {/* Q51 */}
+      <CardMachine
+        stt={24}
+        machineId={machinesId[24]}
+        posLeft={width * 59.55}
+        posTop={height * 81.9}
+        size={width * 1.8}
+        img={Q51Img}
+        plan={producePlanData?.Q51?.plan ? producePlanData.Q51.plan : 0}
+        spm={producePlanData?.Q51?.spm ? producePlanData.Q51.spm : 0}
+        code={producePlanData?.Q51?.code ? producePlanData.Q51.code : ''}
+      />
+
+      {/* Q52 */}
+      <CardMachine
+        stt={24}
+        machineId={machinesId[24]}
+        posLeft={width * 59.55}
+        posTop={height * 76.2}
+        size={width * 1.8}
+        img={Q52Img}
+        plan={producePlanData?.Q52?.plan ? producePlanData.Q52.plan : 0}
+        spm={producePlanData?.Q52?.spm ? producePlanData.Q52.spm : 0}
+        code={producePlanData?.Q52?.code ? producePlanData.Q52.code : ''}
+      />
+
+      {/* Q53 */}
+      <CardMachine
+        stt={24}
+        machineId={machinesId[24]}
+        posLeft={width * 59.55}
+        posTop={height * 70.65}
+        size={width * 1.8}
+        img={Q53Img}
+        plan={producePlanData?.Q53?.plan ? producePlanData.Q53.plan : 0}
+        spm={producePlanData?.Q53?.spm ? producePlanData.Q53.spm : 0}
+        code={producePlanData?.Q53?.code ? producePlanData.Q53.code : ''}
+      />
+
+      {/* Q54 */}
+      <CardMachine
+        stt={24}
+        machineId={machinesId[24]}
+        posLeft={width * 59.55}
+        posTop={height * 65}
+        size={width * 1.8}
+        img={Q54Img}
+        plan={producePlanData?.Q54?.plan ? producePlanData.Q54.plan : 0}
+        spm={producePlanData?.Q54?.spm ? producePlanData.Q54.spm : 0}
+        code={producePlanData?.Q54?.code ? producePlanData.Q54.code : ''}
+      />
+
+      {/* Q55 */}
+      <CardMachine
+        stt={24}
+        machineId={machinesId[24]}
+        posLeft={width * 59.55}
+        posTop={height * 56.9}
+        size={width * 1.8}
+        img={Q55Img}
+        plan={producePlanData?.Q55?.plan ? producePlanData.Q55.plan : 0}
+        spm={producePlanData?.Q55?.spm ? producePlanData.Q55.spm : 0}
+        code={producePlanData?.Q55?.code ? producePlanData.Q55.code : ''}
+      />
+
+      {/* Q56 */}
+      <CardMachine
+        stt={24}
+        machineId={machinesId[24]}
+        posLeft={width * 59.55}
+        posTop={height * 51.5}
+        size={width * 1.8}
+        img={Q56Img}
+        plan={producePlanData?.Q56?.plan ? producePlanData.Q56.plan : 0}
+        spm={producePlanData?.Q56?.spm ? producePlanData.Q56.spm : 0}
+        code={producePlanData?.Q56?.code ? producePlanData.Q56.code : ''}
+      />
+
+      {/* Z31 */}
+      <CardMachine
+        stt={24}
+        machineId={machinesId[24]}
+        posLeft={width * 67}
+        posTop={height * 76.1}
+        size={width * 1.8}
+        img={Z31Img}
+        plan={producePlanData?.Z31?.plan ? producePlanData.Z31.plan : 0}
+        spm={producePlanData?.Z31?.spm ? producePlanData.Z31.spm : 0}
+        code={producePlanData?.Z31?.code ? producePlanData.Z31.code : ''}
       />
     </div>
   );

@@ -144,14 +144,14 @@ function CardMachine({ stt, machineId, posLeft, posTop, size, img, plan, spm, co
         onClose={handlePopoverClose}
         disableRestoreFocus
       >
-        <Card sx={{ minWidth: 960, display: 'flex', border: '1px solid #dadde9', position: 'relative' }}>
+        <Card sx={{ minWidth: 860, display: 'flex', border: '1px solid #dadde9', position: 'relative' }}>
           <CardMedia
             component="img"
-            sx={{ maxHeight: 580, maxWidth: 580, objectFit: 'cover' }}
+            sx={{ maxWidth: 480, objectFit: 'contain' }}
             image={img}
             title={machineData[1] || 'no info'}
           />
-          <CardContent sx={{ minWidth: 360 }}>
+          <CardContent sx={{ width: '100%' }}>
             <Typography gutterBottom variant="h3" component="div" color="primary">
               {translate('Machine name')}: <span style={{ color: '#1C2025' }}>{machineData[1] || 'no info'}</span>
             </Typography>
