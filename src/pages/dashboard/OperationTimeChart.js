@@ -73,8 +73,7 @@ const OperationTimeChart = ({ id, stage, chartMachine, shift, daysNum, maxDate }
     // console.log('Days CHART: ', daysNum);
     // console.log('Max date: ', maxDate);
 
-    let dayBack = new Date();
-    dayBack.setDate(maxDate.getDate() - (daysNum - 1));
+    let dayBack = new Date(maxDate.getTime() - (daysNum - 1) * 24 * 60 * 60 * 1000);
     // console.log('dayBack: ', dayBack);
 
     if (chartMachine) {
