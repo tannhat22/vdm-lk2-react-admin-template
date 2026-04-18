@@ -37,7 +37,7 @@ import Q53Img from 'assets/images/machines/Q53.jpg';
 import Q54Img from 'assets/images/machines/Q54.jpg';
 import Q55Img from 'assets/images/machines/Q55.jpg';
 import Q56Img from 'assets/images/machines/Q56.jpg';
-import Z31Img from 'assets/images/machines/Z31.jpg';
+// import Z31Img from 'assets/images/machines/Z31.jpg';
 
 function SignalLightsLayout({ width, height, producePlanData }) {
   const [machinesId, setMachinesId] = useState([]);
@@ -391,8 +391,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
 
       {/* Q52 */}
       <CardMachine
-        stt={24}
-        machineId={machinesId[24]}
+        stt={25}
+        machineId={machinesId[25]}
         posLeft={width * 59.55}
         posTop={height * 76.2}
         size={width * 1.8}
@@ -404,8 +404,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
 
       {/* Q53 */}
       <CardMachine
-        stt={24}
-        machineId={machinesId[24]}
+        stt={26}
+        machineId={machinesId[26]}
         posLeft={width * 59.55}
         posTop={height * 70.65}
         size={width * 1.8}
@@ -417,8 +417,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
 
       {/* Q54 */}
       <CardMachine
-        stt={24}
-        machineId={machinesId[24]}
+        stt={27}
+        machineId={machinesId[27]}
         posLeft={width * 59.55}
         posTop={height * 65}
         size={width * 1.8}
@@ -430,8 +430,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
 
       {/* Q55 */}
       <CardMachine
-        stt={24}
-        machineId={machinesId[24]}
+        stt={28}
+        machineId={machinesId[28]}
         posLeft={width * 59.55}
         posTop={height * 56.9}
         size={width * 1.8}
@@ -443,8 +443,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
 
       {/* Q56 */}
       <CardMachine
-        stt={24}
-        machineId={machinesId[24]}
+        stt={29}
+        machineId={machinesId[29]}
         posLeft={width * 59.55}
         posTop={height * 51.5}
         size={width * 1.8}
@@ -455,9 +455,9 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       />
 
       {/* Z31 */}
-      <CardMachine
-        stt={24}
-        machineId={machinesId[24]}
+      {/* <CardMachine
+        stt={30}
+        machineId={machinesId[30]}
         posLeft={width * 67}
         posTop={height * 76.1}
         size={width * 1.8}
@@ -465,7 +465,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
         plan={producePlanData?.Z31?.plan ? producePlanData.Z31.plan : 0}
         spm={producePlanData?.Z31?.spm ? producePlanData.Z31.spm : 0}
         code={producePlanData?.Z31?.code ? producePlanData.Z31.code : ''}
-      />
+      /> */}
     </div>
   );
 }

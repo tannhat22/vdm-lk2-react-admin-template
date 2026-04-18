@@ -14,7 +14,7 @@ function ProducePlanLight({ runTime, posLeft, posTop, size }) {
       }}
     >
       <Chip
-        color={runTime >= 80 ? 'primary' : 'error'}
+        color={runTime == 0 ? 'default' : runTime >= 80 ? 'primary' : 'error'}
         // variant={runTime >== 0 ? 'outlined' : 'soft'}
         variant="outlined"
         size="small"
