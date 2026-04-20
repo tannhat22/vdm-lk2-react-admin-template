@@ -68,8 +68,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={0}
         machineId={machinesId[0]}
-        posLeft={width * 21.5}
-        posTop={height * 10.9}
+        posLeft={width * 22}
+        posTop={height * 13.2}
         size={width * 1.8}
         img={j01Img}
         plan={producePlanData?.J01?.plan ? producePlanData.J01.plan : 0}
@@ -81,8 +81,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={1}
         machineId={machinesId[1]}
-        posLeft={width * 21.5}
-        posTop={height * 19}
+        posLeft={width * 22}
+        posTop={height * 21.1}
         size={width * 1.8}
         img={j02Img}
         plan={producePlanData?.J02?.plan ? producePlanData.J02.plan : 0}
@@ -94,8 +94,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={2}
         machineId={machinesId[2]}
-        posLeft={width * 21.5}
-        posTop={height * 27.15}
+        posLeft={width * 22}
+        posTop={height * 29.1}
         size={width * 1.8}
         img={j03Img}
         plan={producePlanData?.J03?.plan ? producePlanData.J03.plan : 0}
@@ -107,8 +107,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={3}
         machineId={machinesId[3]}
-        posLeft={width * 21.5}
-        posTop={height * 35.1}
+        posLeft={width * 22}
+        posTop={height * 37}
         size={width * 1.8}
         img={j04Img}
         plan={producePlanData?.J04?.plan ? producePlanData.J04.plan : 0}
@@ -120,8 +120,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={4}
         machineId={machinesId[4]}
-        posLeft={width * 21.5}
-        posTop={height * 43.2}
+        posLeft={width * 22}
+        posTop={height * 44.8}
         size={width * 1.8}
         img={j05Img}
         plan={producePlanData?.J05?.plan ? producePlanData.J05.plan : 0}
@@ -133,8 +133,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={5}
         machineId={machinesId[5]}
-        posLeft={width * 21.5}
-        posTop={height * 51.4}
+        posLeft={width * 22}
+        posTop={height * 52.7}
         size={width * 1.8}
         img={j06Img}
         plan={producePlanData?.J06?.plan ? producePlanData.J06.plan : 0}
@@ -146,8 +146,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={6}
         machineId={machinesId[6]}
-        posLeft={width * 21.5}
-        posTop={height * 59.35}
+        posLeft={width * 22}
+        posTop={height * 60.8}
         size={width * 1.8}
         img={j07Img}
         plan={producePlanData?.J07?.plan ? producePlanData.J07.plan : 0}
@@ -159,8 +159,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={7}
         machineId={machinesId[7]}
-        posLeft={width * 21.5}
-        posTop={height * 67.2}
+        posLeft={width * 22}
+        posTop={height * 68.3}
         size={width * 1.8}
         img={j08Img}
         plan={producePlanData?.J08?.plan ? producePlanData.J08.plan : 0}
@@ -172,8 +172,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={8}
         machineId={machinesId[8]}
-        posLeft={width * 21.5}
-        posTop={height * 75}
+        posLeft={width * 22}
+        posTop={height * 76.2}
         size={width * 1.8}
         img={j09Img}
         plan={producePlanData?.J09?.plan ? producePlanData.J09.plan : 0}
@@ -185,8 +185,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={9}
         machineId={machinesId[9]}
-        posLeft={width * 21.5}
-        posTop={height * 82.9}
+        posLeft={width * 22}
+        posTop={height * 83.8}
         size={width * 1.8}
         img={j10Img}
         plan={producePlanData?.J10?.plan ? producePlanData.J10.plan : 0}
@@ -198,8 +198,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={10}
         machineId={machinesId[10]}
-        posLeft={width * 48.3}
-        posTop={height * 80.8}
+        posLeft={width * 48.8}
+        posTop={height * 82}
         size={width * 1.8}
         img={j11Img}
         plan={producePlanData?.J11?.plan ? producePlanData.J11.plan : 0}
@@ -211,8 +211,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={11}
         machineId={machinesId[11]}
-        posLeft={width * 48.3}
-        posTop={height * 73.5}
+        posLeft={width * 48.8}
+        posTop={height * 74.35}
         size={width * 1.8}
         img={j12Img}
         plan={producePlanData?.J12?.plan ? producePlanData.J12.plan : 0}
@@ -224,8 +224,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={12}
         machineId={machinesId[12]}
-        posLeft={width * 48.3}
-        posTop={height * 66}
+        posLeft={width * 48.8}
+        posTop={height * 66.6}
         size={width * 1.8}
         img={j13Img}
         plan={producePlanData?.J13?.plan ? producePlanData.J13.plan : 0}
@@ -237,7 +237,7 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={13}
         machineId={machinesId[13]}
-        posLeft={width * 48.3}
+        posLeft={width * 48.8}
         posTop={height * 59}
         size={width * 1.8}
         img={j14Img}
@@ -250,8 +250,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={14}
         machineId={machinesId[14]}
-        posLeft={width * 48.3}
-        posTop={height * 51.55}
+        posLeft={width * 48.8}
+        posTop={height * 51.0}
         size={width * 1.8}
         img={j15Img}
         plan={producePlanData?.J15?.plan ? producePlanData.J15.plan : 0}
@@ -263,8 +263,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={15}
         machineId={machinesId[15]}
-        posLeft={width * 48.3}
-        posTop={height * 43.9}
+        posLeft={width * 48.8}
+        posTop={height * 43.0}
         size={width * 1.8}
         img={j16Img}
         plan={producePlanData?.J16?.plan ? producePlanData.J16.plan : 0}
@@ -276,8 +276,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={16}
         machineId={machinesId[16]}
-        posLeft={width * 48.3}
-        posTop={height * 36.7}
+        posLeft={width * 48.8}
+        posTop={height * 35.1}
         size={width * 1.8}
         img={j17Img}
         plan={producePlanData?.J17?.plan ? producePlanData.J17.plan : 0}
@@ -289,8 +289,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={17}
         machineId={machinesId[17]}
-        posLeft={width * 48.3}
-        posTop={height * 29.4}
+        posLeft={width * 48.8}
+        posTop={height * 27.3}
         size={width * 1.8}
         img={j18Img}
         plan={producePlanData?.J18?.plan ? producePlanData.J18.plan : 0}
@@ -302,8 +302,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={18}
         machineId={machinesId[18]}
-        posLeft={width * 48.3}
-        posTop={height * 22.4}
+        posLeft={width * 48.8}
+        posTop={height * 19.25}
         size={width * 1.8}
         img={j19Img}
         plan={producePlanData?.J19?.plan ? producePlanData.J19.plan : 0}
@@ -315,8 +315,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={19}
         machineId={machinesId[19]}
-        posLeft={width * 48.3}
-        posTop={height * 15.8}
+        posLeft={width * 48.8}
+        posTop={height * 11.4}
         size={width * 1.8}
         img={j20Img}
         plan={producePlanData?.J20?.plan ? producePlanData.J20.plan : 0}
@@ -328,8 +328,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={20}
         machineId={machinesId[20]}
-        posLeft={width * 48.3}
-        posTop={height * 9.4}
+        posLeft={width * 71.1}
+        posTop={height * 13.95}
         size={width * 1.8}
         img={j21Img}
         plan={producePlanData?.J21?.plan ? producePlanData.J21.plan : 0}
@@ -341,8 +341,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={21}
         machineId={machinesId[21]}
-        posLeft={width * 71.3}
-        posTop={height * 11.78}
+        posLeft={width * 71.1}
+        posTop={height * 42.5}
         size={width * 1.8}
         img={j22Img}
         plan={producePlanData?.J22?.plan ? producePlanData.J22.plan : 0}
@@ -354,8 +354,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={22}
         machineId={machinesId[22]}
-        posLeft={width * 71.3}
-        posTop={height * 40.9}
+        posLeft={width * 71.1}
+        posTop={height * 50.2}
         size={width * 1.8}
         img={j23Img}
         plan={producePlanData?.J23?.plan ? producePlanData.J23.plan : 0}
@@ -367,8 +367,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={23}
         machineId={machinesId[23]}
-        posLeft={width * 71.3}
-        posTop={height * 48.75}
+        posLeft={width * 71.1}
+        posTop={height * 58}
         size={width * 1.8}
         img={j24Img}
         plan={producePlanData?.J24?.plan ? producePlanData.J24.plan : 0}
@@ -380,8 +380,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={24}
         machineId={machinesId[24]}
-        posLeft={width * 59.55}
-        posTop={height * 81.9}
+        posLeft={width * 59.51}
+        posTop={height * 83}
         size={width * 1.8}
         img={Q51Img}
         plan={producePlanData?.Q51?.plan ? producePlanData.Q51.plan : 0}
@@ -393,8 +393,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={25}
         machineId={machinesId[25]}
-        posLeft={width * 59.55}
-        posTop={height * 76.2}
+        posLeft={width * 59.51}
+        posTop={height * 77.3}
         size={width * 1.8}
         img={Q52Img}
         plan={producePlanData?.Q52?.plan ? producePlanData.Q52.plan : 0}
@@ -406,8 +406,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={26}
         machineId={machinesId[26]}
-        posLeft={width * 59.55}
-        posTop={height * 70.65}
+        posLeft={width * 59.51}
+        posTop={height * 71.9}
         size={width * 1.8}
         img={Q53Img}
         plan={producePlanData?.Q53?.plan ? producePlanData.Q53.plan : 0}
@@ -419,8 +419,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={27}
         machineId={machinesId[27]}
-        posLeft={width * 59.55}
-        posTop={height * 65}
+        posLeft={width * 59.51}
+        posTop={height * 66.3}
         size={width * 1.8}
         img={Q54Img}
         plan={producePlanData?.Q54?.plan ? producePlanData.Q54.plan : 0}
@@ -432,8 +432,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={28}
         machineId={machinesId[28]}
-        posLeft={width * 59.55}
-        posTop={height * 56.9}
+        posLeft={width * 59.51}
+        posTop={height * 58.3}
         size={width * 1.8}
         img={Q55Img}
         plan={producePlanData?.Q55?.plan ? producePlanData.Q55.plan : 0}
@@ -445,8 +445,8 @@ function SignalLightsLayout({ width, height, producePlanData }) {
       <CardMachine
         stt={29}
         machineId={machinesId[29]}
-        posLeft={width * 59.55}
-        posTop={height * 51.5}
+        posLeft={width * 59.51}
+        posTop={height * 53}
         size={width * 1.8}
         img={Q56Img}
         plan={producePlanData?.Q56?.plan ? producePlanData.Q56.plan : 0}
